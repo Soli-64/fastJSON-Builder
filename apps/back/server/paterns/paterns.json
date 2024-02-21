@@ -1,0 +1,149 @@
+{
+    "paterns": {
+
+
+        "product": {
+
+            "productModel": {
+                "productId": "PROD123",
+                "name": "Laptop",
+                "description": "High performance laptop",
+                "price": 999
+            },
+            "invoiceModel": {
+                "invoice": {
+                "invoiceNumber": "INV20240129",
+                "date": "2024-01-29",
+                "customer": "John Doe",
+                "items": [
+                    {
+                        "id": "PROD1",
+                        "name": "Laptop",
+                        "quantity": 1,
+                        "price": 999
+                    },
+                    {
+                        "id": "PROD2",
+                        "name": "Mouse",
+                        "quantity": 1,
+                        "price": 29
+                    }
+                ],
+                "tax": 80,
+                "total": 1108
+                }
+            },
+            "commandModel": {
+                "order": {
+                "orderNumber": "ORD123",
+                "date": "2024-01-29",
+                "items": [
+                    {
+                        "id": "PROD1",
+                        "name": "Smartphone",
+                        "quantity": 1,
+                        "price": 599
+                    },
+                    {
+                        "id": "PROD2",
+                        "name": "Headphones",
+                        "quantity": 2,
+                        "price": 99
+                    }
+                ],
+                "total": 797
+                }
+            }
+
+        },
+
+
+        "videogame": {
+
+            "characterModel": {
+                "characterId": 1,
+                "name": "Hero",
+                "health": 100,
+                "attack": 20,
+                "defense": 10,
+                "speed": 15,
+                "abilities": ["Slash", "Heal"]
+              },
+            "itemModel": {
+                "itemId": 101,
+                "name": "Sword",
+                "type": "Weapon",
+                "damage": 30,
+                "rarity": "Rare"
+              },
+            "levelModel": {
+                "levelId": 1,
+                "name": "Forest",
+                "difficulty": "Medium",
+                "obstacles": ["Trees", "Rivers"],
+                "enemies": ["Goblins", "Wolves"],
+                "rewards": ["Gold", "XP"]
+              },
+            "questModel": {
+                "questId": 1001,
+                "title": "Save the Village",
+                "description": "Defeat the Goblin King and save the village from destruction.",
+                "objectives": ["Defeat Goblin King", "Protect Villagers"],
+                "rewards": ["Legendary Sword", "XP"]
+              },
+            "dialogModel": {
+                "dialogueId": 1,
+                "speaker": "Villager",
+                "text": "Please, hero! You must save our village from the Goblin King's wrath!",
+                "options": ["Accept", "Decline"]
+              }
+
+        },
+
+
+        "server": {
+
+            "messageModel": {
+                "messageId": 123,
+                "sender": "user1",
+                "recipient": "user2",
+                "content": "Hello, how are you?"
+            },
+            "userDatasModel": {
+                "userId": 123,
+                "username": "john_doe",
+                "email": "john@example.com",
+                "preferences": {
+                    "theme": "light",
+                    "language": "en"
+                }
+            },
+            "apiResponseModel": {
+                "status": "success",
+                "data": {
+                "userId": 123,
+                "username": "john_doe",
+                "email": "john@example.com"
+                }
+            },
+            "configModel": {
+                "database": {
+                "host": "localhost",
+                "port": 3306,
+                "username": "root",
+                "password": "password",
+                "databaseName": "my_database"
+                },
+                "apiKeys": {
+                "weather": "YOUR_WEATHER_API_KEY",
+                "maps": "YOUR_MAPS_API_KEY"
+                },
+                "ui": {
+                "theme": "dark",
+                "language": "en"
+                }
+            }
+
+        }
+    }
+}

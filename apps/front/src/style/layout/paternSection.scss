@@ -1,0 +1,284 @@
+
+:root {
+    --paternBoxBg: #151515;
+    --paternBoxBorder: #252525;
+    --generalBorderColor: #95ED87;
+    --paternModalReprBorder: #252525;
+    --funcButtonBorder: #333333;
+    --funcButtonText: #d0fdca;
+    --funcButtonBg: #1e1e1e;
+}
+
+.generate__paterns {
+
+    width: 80vw;
+    margin: 10vh 5vw;
+    height: auto;
+
+    color: #D9F2F0;
+    font-family: "Protest Strike", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    &__title {
+        position: relative;
+        top: -5vh;
+        width: 80vw;
+        margin: 0 0 8vh 5vw;
+        text-align: center;
+        font-size: 4em;
+    }
+
+}
+
+.patern {
+
+    &__edit {
+        width: 80vw;
+        margin: 0 10vw;
+        height: auto;
+
+        &__container {
+            width: 80vw;
+
+            &__funcs {
+                width: 20vw;
+                padding: 5vh 0;
+                height: auto;
+                border: 3px solid var(--paternModalReprBorder);
+                border-radius: 20px;
+
+                & button {
+
+                    position: relative;
+                    left: 0;
+
+                    color: var(--funcButtonText);
+                    font-family: "Protest Strike", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    font-size: 1.2em;
+                    
+                    background-color: var(--funcButtonBg);
+                    border: 2px solid var(--funcButtonBorder);
+                    border-radius: 10px;
+
+                    margin: 1vh 0;
+                    width: 15vw;
+                    height: auto;
+                    padding: 1vh 1vw;
+
+                    transition: all .5s;
+
+                    &:hover {
+                        transition: all .5s;
+                        position: relative;
+                        left: -5px;
+                        border: 2px solid var(--generalBorderColor);
+                    }
+
+                }
+
+            }
+
+        }
+
+        &__title {
+            position: relative;
+            top: -5vh;
+            text-align: center;
+            font-size: 4em;
+            width: 80vw;
+            margin: 0 0 10vh 0;
+        }
+
+        & textarea {
+
+            width: 40vw;
+            height: 54vh;
+
+            border: 2px solid var(--paternModalReprBorder);
+            border-radius: 20px;
+
+            padding: 3vh 1vw;
+
+            color: #fff;
+            font-family: "JetBrains Mono", monospace;
+            font-size: 1em;
+
+            resize: none;
+            background-color: #000;
+
+        }
+
+    }
+
+    &__container {
+
+        width: 80vw;
+        padding: 2vh 2vh;
+        margin: 3vh 3vw;
+
+        background-color: #171717;
+
+        border: 1px solid #000;
+        transition: border .5s, box-shadow .5s;
+        border-radius: 10px;
+
+        align-items: self-start;
+
+        &:hover {
+            transition: border .5s, box-shadow .7s;
+            border: 1px solid var(--generalBorderColor);
+            box-shadow: 0 0 15px #95ED87; 
+        }
+
+        &__title {
+            width: 80vw;
+            text-align: center;
+            font-size: 2.5em;
+            margin: 3vh 0;
+        }
+    }
+
+    &__box {
+
+        width: 15vw;
+        height: 15vh;
+        border: 2px solid var(--paternBoxBorder);
+        border-radius: 10px;
+        margin: 1vh 1vw;
+        background-color: var(--paternBoxBg);
+        transition: border .5s, transform .5s;
+        animation: fadeFromTop 1.5s;
+
+        &:hover {
+            transition: border .5s, transform .5s;
+            border: 1px solid var(--generalBorderColor);
+            transform: translateY(-15px);
+        }
+
+        &__repr {
+            width: 15vw;
+            height: 10vh;
+        }
+
+        &__name {
+            font-size: 1.3em;
+            text-align: center;
+            align-items: center;
+        }
+
+    }
+
+    &__modal {
+        
+        box-shadow: 0 0 25px #fff;
+        width: 60vw;
+        height: 80vh;
+        border-radius: 30px;
+
+        &__title {
+            font-size: 3.5em;
+            margin: 2vh 0;
+        }
+
+        &__repr {
+
+            width: 50vw;
+            height: 50vh;
+
+            font-size: 1em;
+
+            background-color: #000000;
+
+            scrollbar-width: 15px;
+
+            margin: 3vh 0;
+            padding: 0;
+
+            border: 4px solid var(--paternModalReprBorder);
+            border-radius: 15px;
+
+            text-align: left;
+
+            &__header {
+                opacity: 0;
+                width: calc(50vw + 4px);
+                height: 5vh;
+                background-color: #232323;
+                border-radius: 15px;
+                margin: 0 0 3vh 0;
+                position: relative;
+                top: -1px;
+                left: -2px;
+            }
+
+            &__image{
+
+                width: 15vw;
+                height: 30vh;
+                
+            }
+
+            & pre {
+                font-family: 'Jetbrains Mono';
+                font-size: 1em;
+                width: 30vw;
+                height: 38vh;
+                padding: 1vh 1vw;
+                overflow-y: scroll;
+            }
+
+        }
+
+        &__btns {
+
+            width: 60vw;
+            height: 10vh;
+
+            & button {
+
+                color: #fff;
+                font-family: "Protest Strike", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+
+                font-size: 1.5em;
+
+                border-radius: 15px;
+
+                width: 10vw;
+                height: 6vh;
+                background-color: #111111;
+                transition: border .5s;
+                border: 1px solid transparent;
+
+                &:hover {
+                    transition: border .5s;
+                    border: 1px solid #45BF55;
+                } 
+
+            }
+
+        }
+        
+    }
+
+}
+
+@keyframes fadeFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+        border-color: var(--paternBoxBorder);
+    }
+    50% {   
+        opacity: 1;
+        transform: translateY(0px);
+        border-color: var(--generalBorderColor);
+    }
+    100% {
+        border-color: var(--paternBoxBorder);
+    }
+}

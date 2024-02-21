@@ -1,0 +1,36 @@
+
+.ldg {
+
+    color: #D9F2F0;
+    font-family: "Protest Strike", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    &__intro {
+
+        margin: 5vh 10vw;
+        width: 80vw;
+        height: auto;
+        
+    }
+
+    &__title {
+
+        margin: 25vh 4.5vw;
+        padding-left: 5vw;
+
+        font-size: 5.5em;
+        text-align: left;
+
+        // transition: text-shadow .8s;
+
+        // &:hover {
+
+        //     transition: text-shadow .3s;
+        //     text-shadow: #26A699 10px 5px 15px ;
+
+        // }
+
+    }
+
+}

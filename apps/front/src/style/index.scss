@@ -1,0 +1,26 @@
+@import './utils/reset.scss';
+@import './utils/util.scss';
+@import './components/header.scss';
+@import './layout/home.scss';
+@import './layout/generate.scss';
+@import './components/image.scss';
+@import './components/modal.scss';
+@import './layout/rangeSection.scss';
+@import './layout/paternSection.scss';
+@import './components/btnChoicer.scss';
+
+
+body {
+    background-color: #000;
+    color: #95ED87;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #2b2b2b;
+    border-radius: 6px;
+}

@@ -1,0 +1,50 @@
+{
+    "person": {
+      "firstName": "John",
+      "lastName": "Doe",
+      "age": 30,
+      "gender": "male",
+      "email": "john.doe@example.com",
+      "phone": "+1234567890",
+      "address": {
+        "street": "123 Main Street",
+        "city": "Anytown",
+        "state": "CA",
+        "zip": "12345",
+        "country": "USA"
+      },
+      "education": [
+        {
+          "degree": "Bachelor of Science",
+          "major": "Computer Science",
+          "university": "University of XYZ",
+          "year": 2010
+        },
+        {
+          "degree": "Master of Business Administration",
+          "major": "Finance",
+          "university": "ABC Business School",
+          "year": 2015
+        }
+      ],
+      "employment": [
+        {
+          "company": "TechCorp",
+          "position": "Software Engineer",
+          "startYear": 2010,
+          "endYear": 2015
+        },
+        {
+          "company": "FinanceWorld",
+          "position": "Financial Analyst",
+          "startYear": 2015,
+          "endYear": null
+        }
+      ],
+      "interests": [
+        "Reading",
+        "Hiking",
+        "Photography"
+      ]
+    }
+  }

@@ -1,0 +1,47 @@
+
+.range {
+
+    color: #D9F2F0;
+    font-family: "Protest Strike", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    width: 80vw;
+    margin: 5vh 10vw;
+
+    &__title {
+        font-size: 4em;
+        padding: 5vh 0 2vh 0;
+    }
+
+    &__edit {
+        width: 80vw;
+        height: auto;
+        padding: 10vh 0;
+
+        & textarea {
+            color: #fff;
+            background-color: #000;
+
+            font-family: "JetBrains Mono", monospace;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1.2em;
+
+            width: 35vw;
+            height: 70vh;
+            padding: 2vh 2vw;
+            margin: 5vh 10vw 0 0;
+        }
+
+        &__funcs {
+            border: 2px solid #fff;
+            border-radius: 20px;
+            width: 30vw;
+        }
+
+    }
+
+}
+
+

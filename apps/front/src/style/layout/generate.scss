@@ -1,0 +1,73 @@
+
+:root {
+    --choiceButtonBg: #161616;
+    --choiceButtonBorder: #3e3e3e;
+    --choiceButtonHoverBorder: #45BF55;
+    --quitButtonBg: #161616;
+    --quitButtonBorder: #3e3e3e;
+    --quitButtonHoverBorder: #45BF55;
+}
+
+
+.generate {
+
+    color: #D9F2F0;
+    font-family: "Protest Strike", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    &__choice {
+        width: 90vw;
+        height: 70vh;
+
+        &__btn {
+            width: 20vw;
+            height: 25vh;
+
+            font-size: 2em;
+
+            border-radius: 20px;
+
+            background-color: var(--choiceButtonBg);
+
+            outline: none;
+            border: 4px solid var(--choiceButtonBorder);
+            transition: border .5s;
+
+            &:hover {
+            
+                transition: border .5s;
+                border: 4px solid var(--choiceButtonHoverBorder);
+
+            }
+        }
+
+    }
+
+}
+
+.quit_button {
+
+    color: #D9F2F0;
+    font-family: "Protest Strike", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    font-size: 1.5em;
+
+    width: 15vw;
+    height: 10vh;
+
+    background-color: var(--quitButtonBg) ;
+
+    outline: none;
+    border: 3px solid var(--quitButtonBorder);
+    transition: border .5s;
+    border-radius: 20px;
+
+    &:hover {
+        transition: border .5s;
+        border: 3px solid var(--quitButtonHoverBorder);
+    }
+
+}
