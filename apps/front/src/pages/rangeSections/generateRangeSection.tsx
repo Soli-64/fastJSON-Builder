@@ -53,122 +53,127 @@ export default function GenerateRangeSection({ setForceRender, forceRender, obje
 
     return (
 
-        <div className="fx fx__box fx__ctr fx__col p5">
+        <div className="fx fx__col fx__ctr p5">
+            <div className="fx fx__box fx__ctr fx__col">
 
-            <label className="p__box">Générer par séquences</label>
+                <label className="range__edit__funcs__label" htmlFor="initKey">Générer par séquences</label>
 
-            <div className="fx fx__ctr fx__col p__box">
+                <div className="fx fx__ctr fx__col p__box">
 
-                <input className=" p__box" id="initKey" type="text" placeholder="clé initiale" />
-                <input className=" p__box" id="modifKey" type="text" placeholder="modification de la clé" />
-                
-                <ButtonChoicer 
-                    buttonProps={[
-                        {
-                            name: "String",
-                            onClickParam: 'string',
-                            className: 'typeChoicer__btn'
-                        }, 
-                        {
-                            name: "Number",
-                            onClickParam: 'number',
-                            className: 'typeChoicer__btn'
+                    <input className=" p__box" id="initKey" type="text" placeholder="clé initiale" />
+                    <input className=" p__box" id="modifKey" type="text" placeholder="modification de la clé" />
+                    
+                    <ButtonChoicer 
+                        buttonProps={[
+                            {
+                                name: "String",
+                                onClickParam: 'string',
+                                className: 'typeChoicer__btn'
+                            }, 
+                            {
+                                name: "Number",
+                                onClickParam: 'number',
+                                className: 'typeChoicer__btn'
+                            }
+                        ]} 
+                        onClick={(arg) => {
+                            setModifKeyType({
+                                ...modifKeyType,
+                                addMethode: arg
+                            })
+                        }}        
+                    />
+
+                    <ButtonChoicer 
+                        buttonProps={[
+                            {
+                                name: "Increase",
+                                onClickParam: true,
+                                className: 'typeChoicer__btn'
+                            }, 
+                            {
+                                name: "Decrease",
+                                onClickParam: false,
+                                className: 'typeChoicer__btn'
+                            }
+                        ]} 
+                        onClick={(arg) => {
+                            setModifKeyType({
+                                ...modifKeyType,
+                                increase: arg
+                            })
+                        }}        
+                    />
+
+                    <input className="p__box" id="initValue" type="text" placeholder="valeur initiale" />
+                    <input className="p__box" id="modifValue" type="text" placeholder="modifications de la valeur" />
+                    
+                    <ButtonChoicer 
+                        buttonProps={[
+                            {
+                                name: "String",
+                                onClickParam: 'string',
+                                className: 'typeChoicer__btn'
+                            }, 
+                            {
+                                name: "Number",
+                                onClickParam: 'number',
+                                className: 'typeChoicer__btn'
+                            }
+                        ]} 
+                        onClick={(arg) => {
+                            setModifValueType({
+                                ...modifValueType,
+                                addMethode: arg
+                            })
+                        }}        
+                    />
+
+                    <ButtonChoicer 
+                        buttonProps={[
+                            {
+                                name: "Increase",
+                                onClickParam: true,
+                                className: 'typeChoicer__btn'
+                            }, 
+                            {
+                                name: "Decrease",
+                                onClickParam: false,
+                                className: 'typeChoicer__btn'
+                            }
+                        ]} 
+                        onClick={(arg) => {
+                            setModifValueType({
+                                ...modifValueType,
+                                increase: arg
+                            })
+                        }}        
+                    />
+
+                    <input className="p__box" id="nbrKeyValues" type="text" placeholder="nombres d'ensembles clé-valeur" />
+
+                </div>
+
+                <button 
+                    className="range__edit__funcs__btn"
+                    onClick={() => {
+                        const inputsId = ['#initKey', '#initValue', '#modifKey', '#modifValue', '#nbrKeyValues']
+                        if (getMultipleValues(inputsId).length === 5) {
+                            setObjectState({
+                                ...objRange(valueOf('initKey'), valueOf('initValue'), modifKeyType, modifValueType, Number(valueOf('nbrKeyValues')) ),
+                                ...objectState,
+                                
+                            })
+                            resetInputs(inputsId)
+                        } else {
+                            alert('Il faut remplir toute les cases')
                         }
-                    ]} 
-                    onClick={(arg) => {
-                        setModifKeyType({
-                            ...modifKeyType,
-                            addMethode: arg
-                        })
-                    }}        
-                />
+                        setForceRender(!forceRender)
+                }}>
+                    Générer
+                </button>
 
-                <ButtonChoicer 
-                    buttonProps={[
-                        {
-                            name: "Increase",
-                            onClickParam: true,
-                            className: 'typeChoicer__btn'
-                        }, 
-                        {
-                            name: "Decrease",
-                            onClickParam: false,
-                            className: 'typeChoicer__btn'
-                        }
-                    ]} 
-                    onClick={(arg) => {
-                        setModifKeyType({
-                            ...modifKeyType,
-                            increase: arg
-                        })
-                    }}        
-                />
-
-                <input className="p__box" id="initValue" type="text" placeholder="valeur initiale" />
-                <input className="p__box" id="modifValue" type="text" placeholder="modifications de la valeur" />
-                
-                <ButtonChoicer 
-                    buttonProps={[
-                        {
-                            name: "String",
-                            onClickParam: 'string',
-                            className: 'typeChoicer__btn'
-                        }, 
-                        {
-                            name: "Number",
-                            onClickParam: 'number',
-                            className: 'typeChoicer__btn'
-                        }
-                    ]} 
-                    onClick={(arg) => {
-                        setModifValueType({
-                            ...modifValueType,
-                            addMethode: arg
-                        })
-                    }}        
-                />
-
-                <ButtonChoicer 
-                    buttonProps={[
-                        {
-                            name: "Increase",
-                            onClickParam: true,
-                            className: 'typeChoicer__btn'
-                        }, 
-                        {
-                            name: "Decrease",
-                            onClickParam: false,
-                            className: 'typeChoicer__btn'
-                        }
-                    ]} 
-                    onClick={(arg) => {
-                        setModifValueType({
-                            ...modifValueType,
-                            increase: arg
-                        })
-                    }}        
-                />
-
-                <input className="p__box" id="nbrKeyValues" type="text" placeholder="nombres d'ensembles clé-valeur" />
-            
             </div>
-            
-            <button onClick={() => {
-                const inputsId = ['#initKey', '#initValue', '#modifKey', '#modifValue', '#nbrKeyValues']
-                if (getMultipleValues(inputsId).length === 5) {
-                    setObjectState({
-                        ...objRange(valueOf('initKey'), valueOf('initValue'), modifKeyType, modifValueType, Number(valueOf('nbrKeyValues')) ),
-                        ...objectState,
-                        
-                    })
-                    resetInputs(inputsId)
-                } else {
-                    alert('Il faut remplir toute les cases')
-                }
-                setForceRender(!forceRender)
-            }}>
-                Générer
-            </button>
 
         </div>
 
